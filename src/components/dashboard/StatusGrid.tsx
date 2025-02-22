@@ -64,7 +64,7 @@ const StatusGrid = () => {
 
   const getQueueStatus = () => ({
     position: 5,
-    waitTime: "15 mins",
+    waitTime: "15 menit",
     status: "warning",
   });
 
@@ -109,28 +109,28 @@ const StatusGrid = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <StatusCard
           type="queue"
-          title="Queue Status"
+          title="Status Antrian"
           value={getQueueStatus().position}
           status={getQueueStatus().status}
-          subtitle={`Estimated wait: ${getQueueStatus().waitTime}`}
+          subtitle={`Estimasi waktu tunggu: ${getQueueStatus().waitTime}`}
           onClick={() => setShowQueueModal(true)}
           details={queueDetails}
         />
         <StatusCard
           type="parking"
-          title="Parking Availability"
+          title="Ketersediaan Parkir"
           value={`${getParkingStatus().available}/${getParkingStatus().total}`}
           status={getParkingStatus().status}
-          subtitle={`${getParkingStatus().available} spaces available`}
+          subtitle={`${getParkingStatus().available} tempat tersedia`}
           onClick={() => setShowParkingModal(true)}
           details={parkingDetails}
         />
         <StatusCard
           type="beds"
-          title="Bed Availability"
+          title="Ketersediaan Tempat Tidur"
           value={`${getBedStatus().available}/${getBedStatus().total}`}
           status={getBedStatus().status}
-          subtitle={`${getBedStatus().available} beds available`}
+          subtitle={`${getBedStatus().available} tempat tidur tersedia`}
           onClick={() => setShowBedModal(true)}
           details={bedDetails}
         />

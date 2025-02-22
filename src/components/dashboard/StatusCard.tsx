@@ -50,11 +50,11 @@ const getStatusIcon = (type: StatusType) => {
 
 const StatusCard = ({
   type = "queue",
-  title = "Queue Status",
+  title = "Status Antrian",
   value = "--",
   status = "success",
-  subtitle = "Current position",
-  lastUpdated = "1 min ago",
+  subtitle = "Posisi saat ini",
+  lastUpdated = "1 menit yang lalu",
   onClick,
   details,
 }: StatusCardProps) => {
